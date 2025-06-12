@@ -45,15 +45,15 @@ echo -e "${CYAN}Docker 서비스 활성화 및 시작 중${NC}"
 sudo systemctl enable docker && sudo systemctl start docker
 
 # 6. CESS nodeadm 다운로드 및 설치
-echo -e "${CYAN}CESSv0.6.0 다운로드 중${NC}"
-wget https://github.com/CESSProject/cess-nodeadm/archive/v0.6.0.tar.gz
+echo -e "${CYAN}CESSv0.6.1 다운로드 중${NC}"
+wget https://github.com/CESSProject/cess-nodeadm/archive/v0.6.1.tar.gz
 
 echo -e "${CYAN}CESS 압축 해제 중${NC}"
-tar -xvzf v0.6.0.tar.gz
+tar -xvzf v0.6.1.tar.gz
 
 # CESS nodeadm 디렉토리로 이동
 echo -e "${CYAN}디렉토리 이동 중${NC}"
-cd /root/cess-nodeadm-0.6.0 || { echo -e "${RED}디렉토리 이동 실패${NC}"; exit 1; }
+cd /root/cess-nodeadm-0.6.1 || { echo -e "${RED}디렉토리 이동 실패${NC}"; exit 1; }
 echo -e "${BLUE}현재 디렉토리: $(pwd)${NC}"
 
 echo -e "${CYAN}CESS 설치 중${NC}"
