@@ -87,19 +87,12 @@ echo -e "${BLUE}11. Enter the TEE worker endpoints if you have any${NC}"
 echo -e "${YELLOW}엔터${NC}"
 
 # 7. CESS 프로필 및 설정 구성
-echo -e "${CYAN}프로필 설정 구성 중${NC}"
-sudo cess profile testnet
-
-sleep 2
-
 echo -e "${PURPLE}CESS 구성 설정 중 (사용자 입력 필요)${NC}"
-stdbuf -i0 -o0 -e0 sudo cess config set
-
-echo -e "${GREEN}CESS 구성 완료${NC}"
+sudo cess config set
 
 # 8. CESS 노드 구동 및 Docker 로그 확인
-echo -e "${CYAN}CESS 노드 구동 및 Docker 로그 확인 중${NC}"
-sudo cess start && docker logs miner
+echo -e "${CYAN}CESS 노드 구동${NC}"
+sudo cess start
 
 # 현재 사용 중인 포트 확인
 used_ports=$(netstat -tuln | awk '{print $4}' | grep -o '[0-9]*$' | sort -u)
