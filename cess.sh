@@ -119,6 +119,7 @@ docker ps | grep cess
 
 echo -e "${CYAN}모든 작업이 완료되었습니다 컨트롤+A+D로 스크린을 종료해주세요${NC}"
 echo -e "${GREEN}Faucet 주소: https://cess.network/faucet.html${NC}"
+echo -e "${YELLOW}이명령어를 주기적으로 입력후 unhelthy가 나온다면 로그를 확인해야합니다: docker ps | grep cess${NC}"
 echo -e "${YELLOW}가끔씩 이 명령어를 입력해주세요: sudo cess miner claim${NC}"
 echo -e "${PURPLE}스크립트 작성자: https://t.me/kjkresearch${NC}"
 
