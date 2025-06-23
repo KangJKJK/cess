@@ -109,6 +109,7 @@ for port in $used_ports; do
     echo -e "${CYAN}포트 ${port}을(를) 허용합니다${NC}"
     sudo ufw allow $port/tcp
 done
+sudo ufw allow 19999/tcp
 
 echo -e "${GREEN}모든 사용 중인 포트가 허용되었습니다${NC}"
 
